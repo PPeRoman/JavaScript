@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Verificação de Brasileiros (VBr)</h1>
+    Insira sua nacionalidade: <input type="text" name="nac" id="inac">
+    <input type="button" value="Verificar" onclick="verificar()">
+
+    <div id="res">
+
+    </div>
+
+    <script>
+        function verificar() {
+            var nac = document.getElementById('inac')
+            var nacv = nac.value
+            var res = document.getElementById('res')
+            if (nacv.toLowerCase() == "brasil")
+                res.innerHTML = `Você é brasileiro`
+            else
+                res.innerHTML = `Você é estrangeiro`
+        }
+    </script>
+</body>
+</html>
